@@ -65,12 +65,15 @@
     padding: 8px 6px 10px;
 }
 
-.alter-grid.size-0 .alter-card-head,
 .alter-grid.size-0 .alter-card-identity,
 .alter-grid.size-0 .alter-desc,
 .alter-grid.size-0 .alter-proxies,
 .alter-grid.size-0 .alter-card-accent {
     display: none;
+}
+
+.alter-grid.size-0 .alter-card-head {
+    justify-content: center;
 }
 
 .alter-grid.size-0 .alter-avatar-wrap {
