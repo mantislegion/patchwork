@@ -219,6 +219,13 @@ main {
     font: 0.72rem ui-monospace, SFMono-Regular, Consolas, monospace;
 }
 
+.discord-icon {
+    display: none;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
 .search-form {
     flex: 1 1 190px;
     min-width: 120px;
@@ -592,6 +599,12 @@ main {
 
     #navigation {
         padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .toolbar-status {
+        width: 100%;
     }
 
     .toolbar-row {
@@ -658,35 +671,29 @@ main {
 
 @media (max-width: 520px) {
     .toolbar-row {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
         gap: 8px;
-    }
-
-    .switcher-button {
-        justify-self: start;
-    }
-
-    .toolbar-actions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        width: 100%;
-        margin-left: 0;
-        gap: 6px;
-    }
-
-    .toolbar-button {
-        min-height: 38px;
-        padding: 7px 4px;
-        font-size: 0.8rem;
-    }
-
-    .toolbar-actions .toolbar-button {
-        width: 100%;
     }
 
     .switcher-button kbd {
         display: none;
+    }
+
+    .discord-sync-label {
+        display: none;
+    }
+
+    .discord-icon {
+        display: block;
+    }
+
+    #discord-sync-button {
+        padding: 7px 10px;
+    }
+
+    .toolbar-button {
+        min-height: 38px;
+        padding: 7px 8px;
+        font-size: 0.8rem;
     }
 
     .search-form {
@@ -696,7 +703,7 @@ main {
 
     #sidebar-left,
     #sidebar-right {
-        top: 274px;
+        top: 220px;
     }
 }
 
